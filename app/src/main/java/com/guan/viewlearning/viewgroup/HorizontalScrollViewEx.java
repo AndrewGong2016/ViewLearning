@@ -39,7 +39,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
         if (childCount ==0 ) {
             setMeasuredDimension(0,0);
 
-        } else if (widthMode == MeasureSpec.AT_MOST && heightMode == MeasureSpec.AT_MOST) {
+        } else if (widthMode == MeasureSpec.AT_MOST && heightMode == MeasureSpec.AT_MOST) { //容器使用的宽高均为wrapcontent
 
             final View childview = getChildAt(0);
 
