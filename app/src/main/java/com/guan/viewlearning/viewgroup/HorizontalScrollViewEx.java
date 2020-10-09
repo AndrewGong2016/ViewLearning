@@ -46,6 +46,11 @@ public class HorizontalScrollViewEx extends ViewGroup {
         }
     }
 
+    /**
+     * Measure the view and its content to determine the measured width and the measured height.
+     * @param widthMeasureSpec
+     * @param heightMeasureSpec
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         // call super
@@ -66,7 +71,8 @@ public class HorizontalScrollViewEx extends ViewGroup {
         if (childCount ==0 ) {
             setMeasuredDimension(0,0);
 
-        } else if (widthMode == MeasureSpec.AT_MOST && heightMode == MeasureSpec.AT_MOST) { //容器使用的宽高均为wrap_content
+        } else if (widthMode == MeasureSpec.AT_MOST
+                && heightMode == MeasureSpec.AT_MOST) { //容器使用的宽高均为wrap_content
 
             final View childview = getChildAt(0);
 
